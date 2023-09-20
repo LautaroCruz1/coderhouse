@@ -64,9 +64,14 @@
 
 // pasear()
 
-const multiplicarXdos = function(numero){
-    console.log(numero*2)
-}
+// const multiplicarXdos = function(numero){
+//     console.log(numero*2)
+// }
 
-multiplicarXdos(10);
+// multiplicarXdos(10);
+
+
+// const suma = (numA,numB) => {return numA + numB}
+// suma(2,4)
+
 
