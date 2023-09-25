@@ -10,7 +10,7 @@ resultado = 0
     numB = parseInt(prompt("Ingrese el segundo número"))
     operador = prompt("Ingrese su operador aritmético")
     resultado = 0
-//creamos las subfunciones, en este caso, aritmeticas
+//creamos las subfunciones, en este caso, las operaciones aritmeticas
     let suma = function(numA,numB){
         resultado = numA+numB
         alert("tu resultado es: " + resultado)
@@ -36,7 +36,5 @@ resultado = 0
     }
 
 }
-
-let salir = prompt("Seguir/Salir")
 
 calculadora()
