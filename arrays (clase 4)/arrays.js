@@ -40,7 +40,7 @@
 // ? indexOf() permite obtener el indice de un elemento de un array. En caso de existir, nos retorna su índice (posición). 
 // ? Si el elemento no existe los retornará como valor:-1
 
-const prendas = ["pantalon" , "jean" , "camisa" , "saco"]
+// const prendas = ["pantalon" , "jean" , "camisa" , "saco"]
 
 // console.log(prendas.indexOf("jean")); //retorna 1 (posición de jean)
 // console.log(prendas.indexOf("saco")); //retorna 3 (posición de saco)
@@ -60,4 +60,49 @@ const prendas = ["pantalon" , "jean" , "camisa" , "saco"]
 // console.log(prendas.reverse()); //retorna ['saco', 'camisa', 'jean', 'pantalon'] de forma invertida. Se puede convinar con sort() para ordenar de la Z-A
 
 
+// ? Objetos literales
+
+// const perros = {
+//     nombre: "firulais",
+//     edad: 3,
+//     castrado: true, 
+// }
+
+// console.table(perros)
+
+//? for of
+
+// const productos = [
+//     {id: 1, nombre: "banana"},
+//     {id: 2, nombre: "manzana"},
+//     {id: 3, nombre: "naranja"}
+// ]
+
+// for (const producto of productos)(
+//     console.log(productos)
+// )
+
+
+const productos = [] //creamos el array vacio para posteriormente añadir objetos mediante el prompt
+const seguirComprando = false
+
+
+const agregarProductos = () => {
+    const id = parseInt(prompt("Ingrese el id del producto"))//preguntamos el id
+    const nombre = String(prompt("Ingrese el nombre del producto"))//preguntamos el nombre
+    const producto = {id, nombre}
+    
+    if (productos.includes(nombre) == false){
+        productos.push(producto)//pusheamos los datos al array del principio  
+    }
+    else if (productos.includes(nombre) == true) {
+        alert("Tu producto ya está cargado")
+    }
+    else {
+        alert("Ha ocurrido un error intentalo de nuevo")
+    }
+}
+
+agregarProductos()//llamamos a la funcion
+console.log(productos);//mostramos los resultados por la consola
 
