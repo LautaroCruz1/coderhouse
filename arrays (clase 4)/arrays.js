@@ -84,25 +84,26 @@
 
 
 const productos = [] //creamos el array vacio para posteriormente añadir objetos mediante el prompt
-const seguirComprando = false
 
-
-const agregarProductos = () => {
-    const id = parseInt(prompt("Ingrese el id del producto"))//preguntamos el id
-    const nombre = String(prompt("Ingrese el nombre del producto"))//preguntamos el nombre
-    const producto = {id, nombre}
+function cargarProductos (){
+    let nombreProducto = String(prompt("Que producto desea agregar?"))
     
-    if (productos.includes(nombre) == false){
-        productos.push(producto)//pusheamos los datos al array del principio  
+    while (nombreProducto.trim() === ""){ //trim nos elimina espacios entre strings. por ej huevos duros, queda en huevosduros
+        nombreProducto = prompt("por favor ingrese de nuevo su producto SIN ESPACIOS VACIOS").toLowerCase()
     }
-    else if (productos.includes(nombre) == true) {
-        alert("Tu producto ya está cargado")
-    }
-    else {
-        alert("Ha ocurrido un error intentalo de nuevo")
+    if(productos.includes(nombreProducto) == false){
+        productos.push(nombreProducto)
+    }else{
+        alert("Tu producto ya se encuentra cargado, por favor ingresa otro")
     }
 }
 
-agregarProductos()//llamamos a la funcion
-console.log(productos);//mostramos los resultados por la consola
-
+let seguirComprando = true;
+while(seguirComprando){
+    cargarProductos()
+    seguirComprando = confirm("desea seguir agregando productos?")
+    if(seguirComprando!=true){
+        console.table(productos);
+        break;
+    }
+}

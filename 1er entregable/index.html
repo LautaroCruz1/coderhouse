@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu equipo pokemon</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div id="audio-container">
+        <audio id="cancion" loop autoplay controls>
+            <source src="opening.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div class="mainDiv">
+        <h1>¡Creá tu equipo pokemon!</h1>
+        <button id= "boton" type="button" onclick="general()">Haz click para empezar</button>
+            <div>
+                <p id="equipoInfo"></p>
+            </div>
+    </div>      
+</main>
+
+<script src="pokemon.js"></script>
+</body>
+</html>
